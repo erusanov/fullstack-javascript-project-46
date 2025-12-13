@@ -11,46 +11,55 @@ const getFixturePath = filename => path.join(catalog, '..', '__fixtures__', file
 const readFile = filename => fs.readFileSync(getFixturePath(filename), 'utf-8')
 
 test('gendiff flat json', () => {
-  const flatJsonFilePathA = getFixturePath('file1.json')
-  const flatJsonFilePathB = getFixturePath('file2.json')
-  const flatExpected = readFile('expected_flat.txt').trim()
-  const flatJsonResult = genDiff(flatJsonFilePathA, flatJsonFilePathB)
+  const fileA = getFixturePath('file1.json')
+  const fileB = getFixturePath('file2.json')
+  const expected = readFile('expected_flat.txt').trim()
+  const result = genDiff(fileA, fileB)
 
-  expect(normalizeEOL(flatJsonResult)).toEqual(normalizeEOL(flatExpected))
+  expect(normalizeEOL(result)).toEqual(normalizeEOL(expected))
 })
 
 test('gendiff flat yml', () => {
-  const flatYmlFilePathA = getFixturePath('file1.yml')
-  const flatYmlFilePathB = getFixturePath('file2.yml')
-  const flatExpected = readFile('expected_flat.txt').trim()
-  const flatYmlResult = genDiff(flatYmlFilePathA, flatYmlFilePathB)
+  const fileA = getFixturePath('file1.yml')
+  const fileB = getFixturePath('file2.yml')
+  const expected = readFile('expected_flat.txt').trim()
+  const result = genDiff(fileA, fileB)
 
-  expect(normalizeEOL(flatYmlResult)).toEqual(normalizeEOL(flatExpected))
+  expect(normalizeEOL(result)).toEqual(normalizeEOL(expected))
 })
 
 test('gendiff structured json', () => {
-  const structuredJsonFilePathA = getFixturePath('nestedFile1.json')
-  const structuredJsonFilePathB = getFixturePath('nestedFile2.json')
-  const structuredExpected = readFile('expected_stylish.txt').trim()
-  const structuredJsonResult = genDiff(structuredJsonFilePathA, structuredJsonFilePathB)
+  const fileA = getFixturePath('nestedFile1.json')
+  const fileB = getFixturePath('nestedFile2.json')
+  const expected = readFile('expected_stylish.txt').trim()
+  const result = genDiff(fileA, fileB)
 
-  expect(normalizeEOL(structuredJsonResult)).toEqual(normalizeEOL(structuredExpected))
+  expect(normalizeEOL(result)).toEqual(normalizeEOL(expected))
 })
 
 test('gendiff structured yml', () => {
-  const structuredYmlFilePathA = getFixturePath('nestedFile1.yml')
-  const structuredYmlFilePathB = getFixturePath('nestedFile2.yml')
-  const structuredExpected = readFile('expected_stylish.txt').trim()
-  const structuredYmlResult = genDiff(structuredYmlFilePathA, structuredYmlFilePathB)
+  const fileA = getFixturePath('nestedFile1.yml')
+  const fileB = getFixturePath('nestedFile2.yml')
+  const expected = readFile('expected_stylish.txt').trim()
+  const result = genDiff(fileA, fileB)
 
-  expect(normalizeEOL(structuredYmlResult)).toEqual(normalizeEOL(structuredExpected))
+  expect(normalizeEOL(result)).toEqual(normalizeEOL(expected))
 })
 
 test('gendiff plain format', () => {
-  const filepathA = getFixturePath('nestedFile1.json')
-  const filepathB = getFixturePath('nestedFile2.json')
+  const fileA = getFixturePath('nestedFile1.json')
+  const fileB = getFixturePath('nestedFile2.json')
   const expected = readFile('expected_plain.txt').trim()
-  const result = genDiff(filepathA, filepathB, 'plain')
+  const result = genDiff(fileA, fileB, 'plain')
+
+  expect(normalizeEOL(result)).toEqual(normalizeEOL(expected))
+})
+
+test('gendiff json format', () => {
+  const fileA = getFixturePath('nestedFile1.json')
+  const fileB = getFixturePath('nestedFile2.json')
+  const expected = readFile('expected_json.txt').trim()
+  const result = genDiff(fileA, fileB, 'json')
 
   expect(normalizeEOL(result)).toEqual(normalizeEOL(expected))
 })

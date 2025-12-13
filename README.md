@@ -10,6 +10,9 @@
 ### аскинема сравнения с выводом изменений в plain формате
 [![asciicast](https://asciinema.org/a/sQ2p5W6fluD11QxnRoKJM8WSf.svg)](https://asciinema.org/a/sQ2p5W6fluD11QxnRoKJM8WSf)
 
+### аскинема сравнения с выводом изменений в json формате
+[![asciicast](https://asciinema.org/a/NEle8WbAIDIxXDqPVDpLZXSUS.svg)](https://asciinema.org/a/NEle8WbAIDIxXDqPVDpLZXSUS)
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/erusanov/fullstack-javascript-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/erusanov/fullstack-javascript-project-46/actions)
 

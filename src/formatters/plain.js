@@ -26,7 +26,7 @@ const plain = (tree) => {
       case 'changed':
         return `Property '${currentPath}' was updated. From ${formatValue(node.valueA)} to ${formatValue(node.valueB)}`
       case 'nested':
-        return node.children.flatMap((child) => iter(child, currentPath)).filter(Boolean).join('\n')
+        return node.children.flatMap(child => iter(child, currentPath)).filter(Boolean).join('\n')
       case 'unchanged':
         return null
       default:
@@ -34,7 +34,7 @@ const plain = (tree) => {
     }
   }
 
-  return tree.flatMap((node) => iter(node, '')).filter(Boolean).join('\n')
+  return tree.flatMap(node => iter(node, '')).filter(Boolean).join('\n')
 }
 
 export default plain
