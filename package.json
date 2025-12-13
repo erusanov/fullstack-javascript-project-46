@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "src/parseFiles.js",
   "type": "module",
   "bin": {
     "gendiff": "bin/gendiff.js"
