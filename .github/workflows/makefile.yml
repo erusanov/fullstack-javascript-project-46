@@ -18,10 +18,10 @@ jobs:
       run: ./configure
 
     - name: Install dependencies
-      run: make
+      run: make install
 
     - name: Run check
-      run: make check
+      run: make lint
 
-    - name: Run distcheck
-      run: make distcheck
+    - name: Run tests
+      run: make test
