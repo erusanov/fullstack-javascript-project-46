@@ -1,3 +1,12 @@
+### аскинема сравнения плоского json
+[![asciicast](https://asciinema.org/a/FaMsoskMgMiKgIbKQkXJaUQMJ.svg)](https://asciinema.org/a/FaMsoskMgMiKgIbKQkXJaUQMJ)
+
+### аскинема сравнения плоского yml
+[![asciicast](https://asciinema.org/a/dOq9KUQDqtaSITk0tgAiB6iUM.svg)](https://asciinema.org/a/dOq9KUQDqtaSITk0tgAiB6iUM)
+
+### аскинема сравнения json и yml со вложенностью
+[![asciicast](https://asciinema.org/a/YwxWGXew7sowV2mygkRO1KbKU.svg)](https://asciinema.org/a/YwxWGXew7sowV2mygkRO1KbKU)
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/erusanov/fullstack-javascript-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/erusanov/fullstack-javascript-project-46/actions)
 
