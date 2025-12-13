@@ -45,3 +45,12 @@ test('gendiff structured yml', () => {
 
   expect(normalizeEOL(structuredYmlResult)).toEqual(normalizeEOL(structuredExpected))
 })
+
+test('gendiff plain format', () => {
+  const filepathA = getFixturePath('nestedFile1.json')
+  const filepathB = getFixturePath('nestedFile2.json')
+  const expected = readFile('expected_plain.txt').trim()
+  const result = genDiff(filepathA, filepathB, 'plain')
+
+  expect(normalizeEOL(result)).toEqual(normalizeEOL(expected))
+})
